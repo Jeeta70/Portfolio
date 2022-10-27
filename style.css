@@ -11,7 +11,6 @@
 /* Container */
 
 #container {
-  /* border: 1px solid rgb(128, 0, 64); */
   display: flex;
   flex-direction: column;
   /* background-color: #004b80; */
@@ -23,7 +22,7 @@
 #header {
   background-color: #0b2209;
   height: 20vh;
-  width: 100vw;
+  width: 100%;
   position: static;
   border-bottom: 1px solid white;
   text-align: center;
@@ -50,6 +49,8 @@
 
 #header ul li a {
   text-decoration: none;
+  /* border: 1px solid red; */
+  padding: 1rem 1rem;
 }
 
 #header ul li a:hover {
@@ -67,7 +68,7 @@
 #about {
   /* border: 1px solid red; */
   height: 80vh;
-  width: 100vw;
+  width: 100%;
   background-color: #0b2209;
   padding: 3rem;
   display: grid;
@@ -166,12 +167,13 @@
   width: 80%;
 }
 
-#mongodb{
+#mongodb {
   background-color: brown;
   height: 100%;
   width: 80%;
 }
-#git{
+
+#git {
   background-color: brown;
   height: 100%;
   width: 60%;
@@ -179,14 +181,20 @@
 
 
 /* Education section*/
-#education{
-  border: 1px solid red;
+#education {
+  /* border: 1px solid red; */
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  margin: 1rem 0;
   background-color: #0b2209;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10% auto auto;
+  gap: 1rem;
+
 }
 
-#education .heading{
+#education .heading {
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
@@ -198,6 +206,33 @@
   margin-top: 1rem;
 }
 
+
+#education .education-card:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* border: 1px solid white; */
+  box-shadow: 1px 0px 85px 6px grey;
+  margin: 1rem;
+}
+
+
+#education .education-card:nth-child(5) {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* border: 1px solid white; */
+  box-shadow: 1px 0px 85px 6px grey;
+  margin: 1rem;
+}
+
+#education .education-card img {
+  /* border:1px solid red; */
+  border-radius: 10%;
+  height: 8rem;
+}
 
 /* Header Responsive Code */
 @media(max-width:998px) {
